@@ -890,11 +890,13 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 <script type="importmap">{"imports":{"three":"/static/v2/three/three.module.min.js"}}</script>
 <script type="module">
 const go2d=()=>{ if(window.startArch2D) window.startArch2D(); };
-try{
+const run=async()=>{ try{
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) throw 'reduced';
   const t=document.createElement('canvas'); if(!(t.getContext('webgl2')||t.getContext('webgl'))) throw 'nogl';
   const m=await import('/static/v2/arch3d.js'); if(!m.start()) throw 'start';
-}catch(e){ console.info('arch: 2D', e); go2d(); }
+}catch(e){ console.info('arch: 2D', e); go2d(); } };
+const scEl=document.getElementById('scale');
+if(scEl){ const io=new IntersectionObserver(es=>{ if(es.some(x=>x.isIntersecting)){ io.disconnect(); run(); } },{rootMargin:'1600px 0px'}); io.observe(scEl); }
 </script>
 </body>
 </html>
