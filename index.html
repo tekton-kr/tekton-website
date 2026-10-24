@@ -572,7 +572,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
 // form -> Apps Script endpoint (real delivery). Success is shown only after the server confirms.
-(()=>{const EP='https://script.google.com/macros/s/AKfycbxlxxHQbWIK45JWGuhJk_S74PRpo-eGT8FmYNNqbiuYHa3j8BZWMp1tWIEw7vyQix_G7A/exec';
+(()=>{const EP='https://script.google.com/macros/s/AKfycbzf82iBi8QTubLTfWs4mn8JumuuGDjm0y0GeC0AvVQO2_WvqwrKTccmnqjpeQNOBeti/exec';
   const f=document.getElementById('apply'),ok=document.getElementById('ok'),btn=f.querySelector('button[type=submit]');
   const show=(html,good)=>{ok.innerHTML=html;ok.style.display='block';ok.style.borderLeftColor=good?'var(--green-d)':'var(--red)';ok.style.background=good?'#EEF7EA':'#FBEDEA';};
   f.addEventListener('submit',async e=>{e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}
