@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>텍톤 | 티아크(T-ARCH) · "정상"이라는 보고도, 데이터로 확인합니다</title>
-<meta name="description" content="티아크(T-ARCH)는 기존 중앙감시·자동제어에 읽기 전용으로 연결해 건물 설비의 이상·낭비·고장 징후를 근거와 함께 알려드립니다. 설비 교체 없이, 7일이면 첫 결과.">
-<meta property="og:title" content="텍톤 | 티아크(T-ARCH)">
+<title>텍톤 티아크(T-ARCH) | 건물 설비 데이터 진단, 설비 교체 없이 7일</title>
+<meta name="description" content="텍톤(TEKTON)의 티아크(T-ARCH)는 기존 중앙감시·자동제어에 읽기 전용으로 연결해 건물 설비의 이상·낭비·고장 징후를 근거와 함께 알려드립니다. 설비 교체 없이 7일이면 첫 결과, 월 89만~119만원 수준.">
+<meta property="og:title" content="텍톤 티아크(T-ARCH) | 건물 설비 데이터 진단">
+<meta property="og:site_name" content="텍톤 TEKTON">
+<meta property="og:locale" content="ko_KR">
 <meta property="og:description" content="&quot;정상&quot;이라는 보고도, 데이터로 확인합니다. 설비는 그대로. 데이터만 읽습니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tekton.co.kr/">
@@ -21,7 +23,7 @@
 <link rel="preload" as="image" href="static/v2/hero.avif" type="image/avif" fetchpriority="high">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Organization","name":"텍톤","alternateName":"TEKTON","url":"https://tekton.co.kr/","email":"rok@tekton.co.kr","founder":{"@type":"Person","name":"최경록"},"foundingDate":"2026","address":{"@type":"PostalAddress","streetAddress":"신우실로 100, 현대테라타워 감일 224호","addressLocality":"하남시","addressRegion":"경기도","addressCountry":"KR"}},
+ {"@type":"Organization","name":"텍톤","alternateName":"TEKTON","url":"https://tekton.co.kr/","email":"rok@tekton.co.kr","telephone":"+82-2-3662-9430","logo":"https://tekton.co.kr/favicon.svg","founder":{"@type":"Person","name":"최경록"},"address":{"@type":"PostalAddress","streetAddress":"신우실로 100, 현대테라타워 감일 224호","addressLocality":"하남시","addressRegion":"경기도","addressCountry":"KR"}},
  {"@type":"Product","name":"티아크","alternateName":"T-ARCH","brand":{"@type":"Brand","name":"텍톤"},"description":"기존 중앙감시·자동제어에 읽기 전용으로 연결해 운전 데이터를 자동 분석하고, 이상·낭비·고장 징후를 근거와 함께 알려주는 건물 설비 데이터 진단 서비스","offers":{"@type":"AggregateOffer","priceCurrency":"KRW","lowPrice":"890000","highPrice":"1190000","description":"월 이용료, 부가세 별도, 건물 전체 관제점"}}
 ]}
 </script>
@@ -260,6 +262,15 @@ details.method div{padding:0 0 20px;font-size:15px;color:var(--t-2);line-height:
 .f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--green-d);outline-offset:0;border-color:var(--green-d)}
 .form .btn{width:100%;justify-content:center;margin-top:22px;font-size:17px;padding:19px}
 .form .note{font-size:13.5px;color:var(--t-3);margin-top:12px;line-height:1.55}
+.cons{margin-top:20px;display:grid;gap:10px;padding:16px;background:#F4F6F2;border:1px solid #DDE2DC}
+.cons .c{display:grid;grid-template-columns:22px 1fr;gap:4px 10px;align-items:start}
+.cons input{width:20px;height:20px;margin-top:3px;accent-color:#1F7A0C}
+.cons label{font-size:15px;line-height:1.5;cursor:pointer}
+.cons label b{color:var(--red)}
+.cons details{grid-column:2;font-size:13.5px;color:var(--t-2)}
+.cons summary{cursor:pointer;color:var(--t-3);text-decoration:underline;text-underline-offset:3px;width:max-content}
+.cons details p{margin-top:8px;line-height:1.6}
+.form .note a{color:var(--green-d)}
 .ok{display:none;margin-top:16px;padding:14px 16px;background:#EEF7EA;border-left:3px solid var(--green-d);font-size:15px}
 .creds{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:64px;padding-top:24px;border-top:1px solid var(--line-ink);font-size:15px;color:var(--t-ink-2)}
 .creds b{color:#fff;font-weight:700;margin-right:6px}
@@ -367,6 +378,21 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .equip .ai{padding:14px var(--gut) 18px;text-align:right;font-size:12.5px;color:var(--t-ink-3)}
 @media (max-width:960px){.equip .head{grid-template-columns:1fr}.eq-grid{grid-template-columns:repeat(2,1fr)}}
 
+
+/* ---------- ABOUT / TEAM ---------- */
+.about .head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.tm{background:var(--white);border:1px solid var(--line);padding:24px 22px;display:flex;gap:16px;align-items:center}
+.tm .av{flex:0 0 52px;height:52px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:700;position:relative}
+.tm .av::after{content:"";position:absolute;right:-4px;top:-4px;width:12px;height:12px;border:3px solid var(--green);background:var(--ink)}
+.tm b{display:block;font-size:18px}
+.tm span{display:block;font-size:14.5px;color:var(--t-2);margin-top:2px}
+.recog{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.recog div{padding:20px 4px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+.recog em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--green-d);flex:0 0 74px}
+.recog p{font-size:16px;font-weight:600;line-height:1.45}
+@media (max-width:960px){.about .head{grid-template-columns:1fr;gap:16px}.team{grid-template-columns:1fr 1fr}.recog{grid-template-columns:1fr}}
+@media (max-width:520px){.team{grid-template-columns:1fr}}
 /* ---------- SCALE STORY ---------- */
 .scale{position:relative;height:860vh;background:#0B1012;color:#fff}
 .sc-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(320px,.8fr) 1.2fr;align-items:center}
@@ -457,7 +483,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     </div>
   </div>
   <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
-    <a href="#problem">문제</a><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#value">효과</a><a href="#start">요금 · 신청</a><a href="#faq">자주 묻는 질문</a>
+    <a href="#problem">문제</a><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#value">효과</a><a href="#about">회사 소개</a><a href="#start">요금 · 신청</a><a href="#faq">자주 묻는 질문</a>
   </nav>
 </header>
 
@@ -783,6 +809,33 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   </div>
 </section>
 
+<!-- 7-b. ABOUT -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eb reveal"><i></i><span class="en">ABOUT</span>· 텍톤</div>
+        <h2 class="reveal">자동제어 현장에서<br>출발한 팀입니다.</h2>
+      </div>
+      <p class="lead reveal">공사하고 끝나는 유지보수를, 데이터로 매일 확인하는 유지보수로 바꾸고 있습니다. 티아크(T-ARCH)는 텍톤이 직접 만들고 현장에서 실증하는 제품입니다.</p>
+    </div>
+    <div class="team reveal">
+      <div class="tm"><div class="av" aria-hidden="true">최</div><div><b>최경록</b><span>대표</span></div></div>
+      <div class="tm"><div class="av" aria-hidden="true">우</div><div><b>우원섭</b><span>CTO</span></div></div>
+      <div class="tm"><div class="av" aria-hidden="true">허</div><div><b>허균</b><span>사업개발이사</span></div></div>
+      <div class="tm"><div class="av" aria-hidden="true">박</div><div><b>박준우</b><span>현장 엔지니어</span></div></div>
+    </div>
+    <div class="recog reveal">
+      <div><em>2026</em><p>환경부 에코스타트업 선정</p></div>
+      <div><em>2026</em><p>에코 고객검증 프로그램 선정</p></div>
+      <div><em>2026</em><p>국토교통 투자유치설명회 참여기업</p></div>
+      <div><em>2026.10</em><p>그린 IR 스타터 데모데이 진출</p></div>
+      <div><em>IP</em><p>특허 출원 2건 · 상표 출원 4건</p></div>
+      <div><em>NOW</em><p>병원·업무시설 등 5곳 단계적 실증</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- 8. START -->
 <section class="sec dark" id="start">
   <div class="wrap">
@@ -813,9 +866,15 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
           <div class="f full"><label for="f-e">이메일</label><input id="f-e" name="email" type="email" placeholder="name@company.co.kr"></div>
           <div class="f full"><label for="f-m">궁금한 점</label><textarea id="f-m" name="msg" placeholder="예: 중앙감시 제조사, 관제점 수, 고민 중인 설비"></textarea></div>
         </div>
+        <div class="cons">
+          <div class="c"><input type="checkbox" id="c1" name="c1" required><label for="c1"><b>(필수)</b> 개인정보 수집·이용에 동의합니다.</label>
+            <details><summary>내용 보기</summary><p>항목: 건물명·담당자 성함·연락처(필수), 연면적·이메일·문의 내용(선택)<br>목적: 진단 신청 접수, 연락, 상담·일정 안내, 접수 확인 메일<br>보유 기간: 수집일로부터 1년 (삭제 요청 시 즉시 파기)<br>동의를 거부할 수 있으며, 거부 시 홈페이지 신청은 어렵고 전화(02-3662-9430)로 접수하실 수 있습니다.</p></details></div>
+          <div class="c"><input type="checkbox" id="c2" name="c2" required><label for="c2"><b>(필수)</b> 개인정보 국외 이전에 동의합니다.</label>
+            <details><summary>내용 보기</summary><p>이전받는 자: Google LLC (Google Workspace 메일·스프레드시트)<br>국가: 미국 등 Google 데이터센터 소재 국가<br>항목: 위 신청 항목 전부 · 시기와 방법: 신청 즉시 HTTPS 암호화 전송<br>목적: 신청 메일 전달과 접수 기록 보관 · 보유 기간: 수집일로부터 1년<br>거부할 수 있으며, 거부 시 전화로 접수하시면 국외 이전 없이 처리합니다.</p></details></div>
+        </div>
         <button class="btn primary" type="submit">진단 신청 보내기 →</button>
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-        <p class="note">보내주신 내용은 rok@tekton.co.kr로 바로 접수됩니다. 연락 목적 외에는 쓰지 않습니다.</p>
+        <p class="note">보내주신 내용은 rok@tekton.co.kr로 바로 접수되며, 연락 목적 외에는 쓰지 않습니다. <a href="/privacy.html">개인정보처리방침</a></p>
         <div class="ok" id="ok" role="status" aria-live="polite"></div>
       </form>
     </div>
@@ -849,7 +908,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <div class="ft">
       <div>
         <a class="lockup" href="#top"><img src="static/v2/TEKTON_clean_white.svg" alt="TEKTON 텍톤"><span class="sep"></span><img src="static/v2/T-ARCH_clean_white.svg" alt="T-ARCH 티아크"></a>
-        <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="#faq">자주 묻는 질문</a><a href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">소개서 PDF</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a></div>
+        <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="#about">회사 소개</a><a href="#faq">자주 묻는 질문</a><a href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">소개서 PDF</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a><a href="/privacy.html"><b style="color:#fff">개인정보처리방침</b></a></div>
         <address>텍톤(TEKTON) · 대표 최경록 · <span style="white-space:nowrap">사업자등록번호 720-03-03738</span><br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="tel:0236629430">02-3662-9430</a> · <a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
       </div>
       <div style="max-width:360px"><b style="color:#fff;font-size:16px">"정상"이라는 보고도, 데이터로 확인합니다.</b><p style="margin-top:8px">티아크(T-ARCH)는 텍톤이 만드는 건물 설비 데이터 진단 서비스입니다.</p></div>
@@ -883,10 +942,10 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   const show=(html,good)=>{ok.innerHTML=html;ok.style.display='block';ok.style.borderLeftColor=good?'var(--green-d)':'var(--red)';ok.style.background=good?'#EEF7EA':'#FBEDEA';};
   f.addEventListener('submit',async e=>{e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}
     const v=n=>(f.elements[n].value||'').trim();
-    const data={type:'7일 진단 신청',building:v('building'),size:v('size'),name:v('name'),phone:v('phone'),email:v('email'),msg:v('msg'),website:v('website'),page:location.href.split('#')[0]};
+    const data={type:'7일 진단 신청',building:v('building'),size:v('size'),name:v('name'),phone:v('phone'),email:v('email'),msg:v('msg'),website:v('website'),page:location.href.split('#')[0],consent:f.elements.c1.checked&&f.elements.c2.checked,consentVer:'privacy-2026-10-25'};
     btn.disabled=true;const label=btn.textContent;btn.textContent='보내는 중…';
     try{const r=await fetch(EP,{method:'POST',body:JSON.stringify(data)});const j=await r.json();
-      if(j&&j.ok){show('<b>접수되었습니다.</b> 1영업일 안에 '+(data.phone?data.phone+'로 ':'')+'연락드리겠습니다.',true);f.reset();}
+      if(j&&j.ok){show('<b>접수되었습니다.</b> 1영업일 안에 '+(data.phone?data.phone+'로 ':'')+'연락드리겠습니다.'+(data.email?' 접수 확인 메일도 보내드렸습니다.':''),true);f.reset();if(window.gtag)gtag('event','generate_lead',{form:'7day_diagnosis'});}
       else throw new Error(j&&j.error||'fail');}
     catch(err){const body=encodeURIComponent(`[티아크 7일 진단 신청]\n\n건물명: ${data.building}\n연면적: ${data.size||'-'}\n담당자: ${data.name}\n연락처: ${data.phone}\n이메일: ${data.email||'-'}\n\n궁금한 점:\n${data.msg||'-'}`);
       show('전송에 실패했습니다. <a href="mailto:rok@tekton.co.kr?subject='+encodeURIComponent('[7일 진단 신청] '+data.building)+'&body='+body+'">여기를 눌러 메일로 보내주세요</a> (rok@tekton.co.kr).',false);}
