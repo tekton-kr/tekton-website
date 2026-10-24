@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="static/v2/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="static/v2/hero.avif" type="image/avif" fetchpriority="high">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Organization","name":"텍톤","alternateName":"TEKTON","url":"https://tekton.co.kr/","email":"rok@tekton.co.kr","founder":{"@type":"Person","name":"최경록"},"foundingDate":"2026","address":{"@type":"PostalAddress","streetAddress":"신우실로 100, 현대테라타워 감일 224호","addressLocality":"하남시","addressRegion":"경기도","addressCountry":"KR"}},
@@ -348,6 +348,24 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .skip:focus{top:12px}
 :focus-visible{outline:3px solid var(--green-d);outline-offset:3px}
 .dark :focus-visible,.hero :focus-visible,.nav :focus-visible,footer :focus-visible,.vision :focus-visible{outline-color:var(--green)}
+
+/* ---------- EQUIPMENT ---------- */
+.equip{background:var(--ink);color:#fff;padding:clamp(72px,9vw,120px) 0 0}
+.equip .head{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.equip h2{color:#fff}
+.equip .lead{color:var(--t-ink-2)}
+.eq-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+.eq{position:relative;overflow:hidden;aspect-ratio:4/5;background:#0B1012}
+.eq picture,.eq img{position:absolute;inset:0;width:100%;height:100%}
+.eq img{object-fit:cover;transform:scale(1.02);transition:transform 1.2s cubic-bezier(.2,.7,.2,1);filter:saturate(.9)}
+.eq:hover img{transform:scale(1.07)}
+.eq::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,22,25,0) 40%,rgba(16,22,25,.92) 100%)}
+.eq figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:24px 22px}
+.eq figcaption b{display:block;font-size:clamp(19px,1.6vw,23px);font-weight:700}
+.eq figcaption span{display:block;margin-top:6px;font-size:14.5px;color:var(--t-ink-2);line-height:1.5}
+.eq figcaption em{font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--green);display:block;margin-bottom:8px}
+.equip .ai{padding:14px var(--gut) 18px;text-align:right;font-size:12.5px;color:var(--t-ink-3)}
+@media (max-width:960px){.equip .head{grid-template-columns:1fr}.eq-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -378,7 +396,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 <!-- 1. HERO -->
 <section class="hero" aria-label="소개">
   <div class="stage" id="stage">
-    <img src="static/v2/hero.jpg" alt="" id="poster">
+    <picture><source srcset="static/v2/hero.avif" type="image/avif"><source srcset="static/v2/hero.webp" type="image/webp"><img src="static/v2/hero.jpg" alt="" id="poster" width="1983" height="793" fetchpriority="high"></picture>
     <canvas id="gl"></canvas>
     <canvas id="fx"></canvas>
   </div>
@@ -418,6 +436,24 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <p class="fn reveal" style="margin-top:20px">인천 복합시설 실제 사례(2026년 6~8월)의 값입니다.</p>
     <div class="risk reveal"><b>방치하면</b><span>예상치 못한 수선비</span><span>·</span><span>임차인 클레임</span><span>·</span><span>에너지 낭비</span><span>·</span><span>자산가치 하락</span></div>
   </div>
+</section>
+
+<!-- 2-b. EQUIPMENT -->
+<section class="equip" id="equipment" aria-label="티아크가 읽는 설비">
+  <div class="wrap head">
+    <div>
+      <div class="eb reveal"><i></i><span class="en">EQUIPMENT</span>· 티아크가 읽는 설비</div>
+      <h2 class="reveal">설비는 이미<br>매일 말하고 있습니다.</h2>
+    </div>
+    <p class="lead reveal" style="max-width:520px">공조기, 냉동기, 펌프의 상태는 모두 자동제어반에 기록됩니다. 티아크는 그 기록을 매일 끝까지 읽습니다.</p>
+  </div>
+  <div class="eq-grid reveal">
+      <figure class="eq"><picture><source srcset="static/v2/equip/ahu.webp" type="image/webp"><img src="static/v2/equip/ahu.jpg" alt="건물 기계실의 대형 공조기와 덕트" loading="lazy" width="1200" height="800"></picture><figcaption><em>AHU</em><b>공조기</b><span>급기 온도 · 외기 댐퍼 개도 · 팬 운전</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/chiller.webp" type="image/webp"><img src="static/v2/equip/chiller.jpg" alt="기계실의 냉동기와 냉수 배관" loading="lazy" width="1200" height="800"></picture><figcaption><em>CHILLER</em><b>냉동기</b><span>냉수 온도 · 운전 상태 · 부하</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/pump.webp" type="image/webp"><img src="static/v2/equip/pump.jpg" alt="펌프실에 나란히 설치된 펌프" loading="lazy" width="1200" height="800"></picture><figcaption><em>PUMP</em><b>펌프</b><span>운전·정지 · 압력 · 운전 시간</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/ddc.webp" type="image/webp"><img src="static/v2/equip/ddc.jpg" alt="자동제어반 안의 DDC 컨트롤러와 배선" loading="lazy" width="1200" height="800"></picture><figcaption><em>DDC</em><b>자동제어반</b><span>모든 관제점의 기록이 모이는 곳</span></figcaption></figure>
+  </div>
+  <p class="ai">이미지는 AI로 연출한 장면입니다</p>
 </section>
 
 <!-- 3. SOLUTION -->
