@@ -1,5 +1,5 @@
 /* T-ARCH scale story: one signal -> equipment -> EDGE -> building -> cloud -> buildings -> Korea -> today */
-(()=>{
+window.startArch2D=()=>{
 const sec=document.getElementById('scale'); if(!sec) return;
 const cv=sec.querySelector('canvas'), cx=cv.getContext('2d');
 const caps=[...sec.querySelectorAll('.sc-cap')], bar=sec.querySelector('.sc-bar i'), idx=sec.querySelector('.sc-idx b');
@@ -136,4 +136,4 @@ function frame(time){
   cx.globalAlpha=1;
 }
 requestAnimationFrame(frame);
-})();
+};
