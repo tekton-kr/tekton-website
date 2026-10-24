@@ -22,7 +22,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Organization","name":"텍톤","alternateName":"TEKTON","url":"https://tekton.co.kr/","email":"rok@tekton.co.kr","founder":{"@type":"Person","name":"최경록"},"foundingDate":"2026","address":{"@type":"PostalAddress","streetAddress":"신우실로 100, 현대테라타워 감일 224호","addressLocality":"하남시","addressRegion":"경기도","addressCountry":"KR"}},
- {"@type":"Product","name":"티아크","alternateName":"T-ARCH","brand":{"@type":"Brand","name":"텍톤"},"description":"기존 중앙감시·자동제어에 읽기 전용으로 연결해 운전 데이터를 자동 분석하고, 이상·낭비·고장 징후를 근거와 함께 알려주는 건물 설비 AI 진단 서비스","offers":{"@type":"AggregateOffer","priceCurrency":"KRW","lowPrice":"890000","highPrice":"1190000","description":"월 이용료, 부가세 별도, 건물 전체 관제점"}}
+ {"@type":"Product","name":"티아크","alternateName":"T-ARCH","brand":{"@type":"Brand","name":"텍톤"},"description":"기존 중앙감시·자동제어에 읽기 전용으로 연결해 운전 데이터를 자동 분석하고, 이상·낭비·고장 징후를 근거와 함께 알려주는 건물 설비 데이터 진단 서비스","offers":{"@type":"AggregateOffer","priceCurrency":"KRW","lowPrice":"890000","highPrice":"1190000","description":"월 이용료, 부가세 별도, 건물 전체 관제점"}}
 ]}
 </script>
 <style>
@@ -366,6 +366,44 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .eq figcaption em{font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--green);display:block;margin-bottom:8px}
 .equip .ai{padding:14px var(--gut) 18px;text-align:right;font-size:12.5px;color:var(--t-ink-3)}
 @media (max-width:960px){.equip .head{grid-template-columns:1fr}.eq-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- SCALE STORY ---------- */
+.scale{position:relative;height:760vh;background:#0B1012;color:#fff}
+.sc-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(320px,.8fr) 1.2fr;align-items:center}
+.sc-pin::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 60% at 68% 50%,rgba(70,255,22,.06),transparent 70%);pointer-events:none}
+.sc-text{position:relative;z-index:1;padding-left:max(var(--gut),calc((100vw - var(--wrap))/2));padding-right:24px}
+.sc-text .eb{color:var(--t-ink-3)}
+.sc-caps{position:relative;min-height:300px;margin-top:22px}
+.sc-cap{position:absolute;inset:0 0 auto 0;opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;pointer-events:none}
+.sc-cap.on{opacity:1;transform:none}
+.sc-cap .k{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--green)}
+.sc-cap .k.v{display:inline-block;border:1px solid var(--green);padding:3px 8px}
+.sc-cap h3{font-size:clamp(28px,3vw,42px);line-height:1.25;letter-spacing:-.03em;margin-top:12px;font-weight:700}
+.sc-cap p{margin-top:16px;font-size:clamp(16px,1.25vw,18px);line-height:1.7;color:var(--t-ink-2);max-width:460px}
+.sc-meta{display:flex;align-items:center;gap:14px;margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--t-ink-3)}
+.sc-meta b{color:#fff;font-weight:600}
+.sc-bar{width:140px;height:2px;background:rgba(255,255,255,.12);overflow:hidden}
+.sc-bar i{display:block;height:100%;background:var(--green);transform-origin:0 50%;transform:scaleX(0)}
+.sc-canvas{position:relative;height:100vh}
+.sc-canvas canvas{position:absolute;inset:0;width:100%;height:100%}
+@media (max-width:900px){.scale{height:700vh}.sc-pin{grid-template-columns:1fr;grid-template-rows:56vh auto;align-items:start}
+  .sc-canvas{height:56vh;grid-row:1}.sc-text{grid-row:2;padding:0 var(--gut)}.sc-caps{min-height:230px;margin-top:10px}.sc-text .eb{display:none}}
+@media (prefers-reduced-motion:reduce){.scale{display:none}}
+/* ---------- ARCH DIAGRAM ---------- */
+.archd{background:#0B1012;color:#fff;padding:24px 0 clamp(80px,10vw,128px)}
+.archd h3.t{font-size:clamp(22px,2vw,28px)}
+.arch-row{display:grid;grid-template-columns:1fr 34px 1fr 34px 1.25fr 34px 1.25fr;align-items:stretch;margin-top:28px}
+.arch-row .ar{display:flex;align-items:center;justify-content:center;color:var(--green);font-family:var(--mono);font-size:18px}
+.ab{border:1px solid rgba(255,255,255,.14);padding:22px 20px;background:rgba(255,255,255,.02)}
+.ab.hl{border-color:rgba(70,255,22,.55);box-shadow:inset 0 0 0 1px rgba(70,255,22,.15)}
+.ab .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--t-ink-3)}
+.ab h4{font-size:18px;margin-top:8px;font-weight:700}
+.ab ul{list-style:none;margin-top:12px;display:grid;gap:7px}
+.ab li{font-size:14.5px;color:var(--t-ink-2);line-height:1.5}
+.ab .two{display:grid;gap:14px}
+.ab .two>div+div{border-top:1px solid rgba(255,255,255,.1);padding-top:14px}
+.archd .rule{margin-top:18px;font-size:14px;color:var(--t-ink-3)}
+@media (max-width:1000px){.arch-row{grid-template-columns:1fr}.arch-row .ar{transform:rotate(90deg);height:34px}}
 </style>
 </head>
 <body>
@@ -402,7 +440,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   </div>
   <div class="shade"></div>
   <div class="wrap hero-copy">
-    <div class="eb"><i></i>티아크 · 건물 설비 AI 진단</div>
+    <div class="eb"><i></i>티아크 · 건물 설비 데이터 진단</div>
     <h1>"정상"이라는 보고도,<br><em>데이터로</em> 확인합니다.</h1>
     <p class="lead">티아크(T-ARCH)는 기존 중앙감시·자동제어에 읽기 전용으로 연결해 운전 데이터를 자동 분석합니다. 이상·낭비·고장 징후를 근거와 함께 알려드립니다.</p>
     <div class="btns"><a class="btn primary" href="#start">우리 건물 7일 진단 신청 →</a><a class="btn ghost" href="#case">실제 사례 보기</a></div>
@@ -481,6 +519,42 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
       </div>
       <div class="device reveal"><div class="bar"><i></i><i></i><i></i></div><img src="static/v2/dashboard.jpg" alt="티아크 실제 대시보드 화면: 건물 4곳의 상태, 지도 위 건물 위치, 지금 볼 건물, 최근 7일 알람 추이" loading="lazy"></div>
     </div>
+  </div>
+</section>
+
+<!-- 3-a0. SCALE STORY -->
+<section class="scale" id="scale" aria-label="티아크 구조: 신호 하나에서 건물, 여러 건물로">
+  <div class="sc-pin">
+    <div class="sc-text">
+      <div class="eb"><i></i><span class="en">ARCHITECTURE</span>· 티아크 구조</div>
+      <div class="sc-meta"><b class="sc-idx"><b>01</b></b><span>/ 08</span><span class="sc-bar"><i></i></span></div>
+      <div class="sc-caps">
+        <div class="sc-cap on"><span class="k">01 · 신호 하나</span><h3>건물의 모든 판단은<br>신호 하나에서 시작합니다.</h3><p>냉수 온도 하나, 댐퍼 개도 하나. 설비는 쉬지 않고 값을 남깁니다.</p></div>
+        <div class="sc-cap"><span class="k">02 · 설비</span><h3>신호가 모이면<br>설비가 보입니다.</h3><p>공조기 한 대에도 온도·압력·댐퍼·팬 운전 같은 관제점이 수십 개 붙어 있습니다.</p></div>
+        <div class="sc-cap"><span class="k">03 · T-ARCH EDGE</span><h3>T-ARCH EDGE가<br>읽습니다.</h3><p>현장 미니PC가 기존 자동제어(BACnet/IP 등)에 붙어 15분마다 데이터를 읽습니다. 명령은 보내지 않습니다.</p></div>
+        <div class="sc-cap"><span class="k">04 · 건물</span><h3>설비가 모이면<br>건물이 됩니다.</h3><p>인천의 한 복합시설에는 관제점 312개, 경기도의 한 종합병원에는 2,075개가 있습니다.</p></div>
+        <div class="sc-cap"><span class="k">05 · T-ARCH 클라우드</span><h3>믿을 수 있는 값으로만<br>판정합니다.</h3><p>값이 믿을 만한지 먼저 확인하고, 규칙으로 판정해 근거와 함께 보고합니다. 근거가 부족하면 "판단 불가"라고 말합니다.</p></div>
+        <div class="sc-cap"><span class="k">06 · 여러 건물</span><h3>건물 하나에서,<br>여러 건물로.</h3><p>지금 병원·업무시설 등 5곳에서 단계적으로 실증하고 있습니다.</p></div>
+        <div class="sc-cap"><span class="k v">VISION</span><h3>그리고<br>한국의 건물로.</h3><p>건물 하나의 데이터가 쌓여 도시의 기준이 되고, 한국 건물 운영의 중심축이 되는 것. 텍톤이 가려는 방향입니다.</p></div>
+        <div class="sc-cap"><span class="k">08 · 오늘 볼 것</span><h3>그래도 사람이 볼 것은<br>단순해야 합니다.</h3><p>수천 개의 신호에서 오늘 볼 것만 남깁니다. T-ARCH, 건물의 중심축.</p></div>
+      </div>
+    </div>
+    <div class="sc-canvas"><canvas aria-hidden="true"></canvas></div>
+  </div>
+</section>
+<section class="archd" id="architecture" aria-label="티아크 구조도">
+  <div class="wrap">
+    <h3 class="t">한눈에 보는 티아크 구조</h3>
+    <div class="arch-row">
+      <div class="ab"><div class="k">EXISTING</div><h4>기존 자동제어</h4><ul><li>중앙감시 · DDC</li><li>BACnet/IP · BACnet MS/TP · Modbus</li><li>교체·공사 없음</li></ul></div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="ab hl"><div class="k">T-ARCH EDGE</div><h4>현장 수집기</h4><ul><li>현장 미니PC 설치</li><li>15분마다 읽기</li><li>읽기 전용 · 명령 없음</li></ul></div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="ab hl"><div class="k">T-ARCH CLOUD</div><h4>분석</h4><ul><li>값을 믿을 수 있는지 먼저 확인</li><li>규칙으로 판정, 근거와 함께 보고</li><li>경보 · 트렌드 · 통신상태 · 에너지 성과</li><li>전기요금 · 피크 · 역률 조언</li></ul></div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="ab"><div class="two"><div><div class="k">T-ARCH WEB</div><h4>건물주 · 관리소장</h4><ul><li>건물별 상태를 한눈에</li><li>월간 업무보고 · 법정 점검 일정</li></ul></div><div><div class="k">T-ARCH APP</div><h4>시설 기사님</h4><ul><li>오늘 할 일 · 점검 · 사진 보고</li><li>설비 QR 스캔 · 검침</li></ul></div></div></div>
+    </div>
+    <p class="rule">데이터는 한 방향으로만 흐릅니다. 티아크는 설비에 명령을 보내지 않습니다.</p>
   </div>
 </section>
 
@@ -746,7 +820,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
         <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="#faq">자주 묻는 질문</a><a href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">소개서 PDF</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a></div>
         <address>텍톤(TEKTON) · 대표 최경록 · <span style="white-space:nowrap">사업자등록번호 720-03-03738</span><br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="tel:0236629430">02-3662-9430</a> · <a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
       </div>
-      <div style="max-width:360px"><b style="color:#fff;font-size:16px">"정상"이라는 보고도, 데이터로 확인합니다.</b><p style="margin-top:8px">티아크(T-ARCH)는 텍톤이 만드는 건물 설비 AI 진단 서비스입니다.</p></div>
+      <div style="max-width:360px"><b style="color:#fff;font-size:16px">"정상"이라는 보고도, 데이터로 확인합니다.</b><p style="margin-top:8px">티아크(T-ARCH)는 텍톤이 만드는 건물 설비 데이터 진단 서비스입니다.</p></div>
     </div>
     <div class="legal">
       <p>진단 결과는 설비 상태에 대한 데이터 기반 참고 정보입니다. 설비의 운영·보수에 관한 최종 판단과 책임은 건물 관리주체에 있습니다.</p>
@@ -788,5 +862,6 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   });})();
 </script>
 <script src="static/v2/hero.js"></script>
+<script src="static/v2/arch.js" defer></script>
 </body>
 </html>
