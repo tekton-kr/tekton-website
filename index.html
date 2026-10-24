@@ -368,7 +368,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 @media (max-width:960px){.equip .head{grid-template-columns:1fr}.eq-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* ---------- SCALE STORY ---------- */
-.scale{position:relative;height:760vh;background:#0B1012;color:#fff}
+.scale{position:relative;height:860vh;background:#0B1012;color:#fff}
 .sc-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(320px,.8fr) 1.2fr;align-items:center}
 .sc-pin::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 60% at 68% 50%,rgba(70,255,22,.06),transparent 70%);pointer-events:none}
 .sc-text{position:relative;z-index:1;padding-left:max(var(--gut),calc((100vw - var(--wrap))/2));padding-right:24px}
@@ -386,7 +386,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .sc-bar i{display:block;height:100%;background:var(--green);transform-origin:0 50%;transform:scaleX(0)}
 .sc-canvas{position:relative;height:100vh}
 .sc-canvas canvas{position:absolute;inset:0;width:100%;height:100%}
-@media (max-width:900px){.scale{height:700vh}.sc-pin{grid-template-columns:1fr;grid-template-rows:56vh auto;align-items:start}
+@media (max-width:900px){.scale{height:790vh}.sc-pin{grid-template-columns:1fr;grid-template-rows:56vh auto;align-items:start}
   .sc-canvas{height:56vh;grid-row:1}.sc-text{grid-row:2;padding:0 var(--gut)}.sc-caps{min-height:230px;margin-top:10px}.sc-text .eb{display:none}}
 @media (prefers-reduced-motion:reduce){.scale{display:none}}
 
@@ -413,6 +413,11 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .sc-today p{margin-top:12px;font-size:12px;color:var(--t-ink-3)}
 .scale.is3d .sc-pin::before{background:radial-gradient(60% 70% at 70% 45%,rgba(70,255,22,.035),transparent 70%)}
 @media (max-width:900px){.scale.is3d .sc-pin{padding-top:64px;grid-template-rows:50vh auto}.scale.is3d .sc-canvas{height:50vh}.sc-today{transform-origin:50% 50%;scale:.86}.sc-hud{bottom:10px;right:var(--gut);font-size:9.5px}.sc-lb span{font-size:12px}.sc-hud div:nth-child(2){display:none}}
+.sc-dash{position:absolute;left:0;top:0;margin:0;opacity:0;pointer-events:none;will-change:transform,opacity;border:1px solid rgba(70,255,22,.45);background:#0B1012;box-shadow:0 0 0 1px rgba(70,255,22,.12),0 0 60px rgba(70,255,22,.18),0 30px 80px -20px rgba(0,0,0,.7)}
+.sc-dash figcaption{display:flex;gap:10px;align-items:center;padding:7px 10px;font-size:11.5px;color:var(--t-ink-2);border-bottom:1px solid rgba(70,255,22,.25);white-space:nowrap;overflow:hidden}
+.sc-dash figcaption span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--green)}
+.sc-dash img{display:block;width:100%;height:auto}
+.scale:not(.is3d) .sc-dash{display:none}
 /* ---------- ARCH DIAGRAM ---------- */
 .archd{background:#0B1012;color:#fff;padding:24px 0 clamp(80px,10vw,128px)}
 .archd h3.t{font-size:clamp(22px,2vw,28px)}
@@ -510,10 +515,10 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <p class="lead reveal" style="max-width:520px">공조기, 냉동기, 펌프의 상태는 모두 자동제어반에 기록됩니다. 티아크는 그 기록을 매일 끝까지 읽습니다.</p>
   </div>
   <div class="eq-grid reveal">
-      <figure class="eq"><picture><source srcset="static/v2/equip/ahu.webp" type="image/webp"><img src="static/v2/equip/ahu.jpg" alt="건물 기계실의 대형 공조기와 덕트" loading="lazy" width="1200" height="800"></picture><figcaption><em>AHU</em><b>공조기</b><span>급기 온도 · 외기 댐퍼 개도 · 팬 운전</span></figcaption></figure>
-      <figure class="eq"><picture><source srcset="static/v2/equip/chiller.webp" type="image/webp"><img src="static/v2/equip/chiller.jpg" alt="기계실의 냉동기와 냉수 배관" loading="lazy" width="1200" height="800"></picture><figcaption><em>CHILLER</em><b>냉동기</b><span>냉수 온도 · 운전 상태 · 부하</span></figcaption></figure>
-      <figure class="eq"><picture><source srcset="static/v2/equip/pump.webp" type="image/webp"><img src="static/v2/equip/pump.jpg" alt="펌프실에 나란히 설치된 펌프" loading="lazy" width="1200" height="800"></picture><figcaption><em>PUMP</em><b>펌프</b><span>운전·정지 · 압력 · 운전 시간</span></figcaption></figure>
-      <figure class="eq"><picture><source srcset="static/v2/equip/ddc.webp" type="image/webp"><img src="static/v2/equip/ddc.jpg" alt="자동제어반 안의 DDC 컨트롤러와 배선" loading="lazy" width="1200" height="800"></picture><figcaption><em>DDC</em><b>자동제어반</b><span>모든 관제점의 기록이 모이는 곳</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/ahu.avif" type="image/avif"><source srcset="static/v2/equip/ahu.webp" type="image/webp"><img src="static/v2/equip/ahu.jpg" alt="건물 기계실의 대형 공조기와 덕트" loading="lazy" width="1200" height="800"></picture><figcaption><em>AHU</em><b>공조기</b><span>급기 온도 · 외기 댐퍼 개도 · 팬 운전</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/chiller.avif" type="image/avif"><source srcset="static/v2/equip/chiller.webp" type="image/webp"><img src="static/v2/equip/chiller.jpg" alt="기계실의 냉동기와 냉수 배관" loading="lazy" width="1200" height="800"></picture><figcaption><em>CHILLER</em><b>냉동기</b><span>냉수 온도 · 운전 상태 · 부하</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/pump.avif" type="image/avif"><source srcset="static/v2/equip/pump.webp" type="image/webp"><img src="static/v2/equip/pump.jpg" alt="펌프실에 나란히 설치된 펌프" loading="lazy" width="1200" height="800"></picture><figcaption><em>PUMP</em><b>펌프</b><span>운전·정지 · 압력 · 운전 시간</span></figcaption></figure>
+      <figure class="eq"><picture><source srcset="static/v2/equip/ddc.avif" type="image/avif"><source srcset="static/v2/equip/ddc.webp" type="image/webp"><img src="static/v2/equip/ddc.jpg" alt="자동제어반 안의 DDC 컨트롤러와 배선" loading="lazy" width="1200" height="800"></picture><figcaption><em>DDC</em><b>자동제어반</b><span>모든 관제점의 기록이 모이는 곳</span></figcaption></figure>
   </div>
   <p class="ai">이미지는 AI로 연출한 장면입니다</p>
 </section>
@@ -541,7 +546,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
         </ol>
         <p class="fn" style="margin-top:22px">실제 화면(2026년 10월) · 건물명은 가림 처리</p>
       </div>
-      <div class="device reveal"><div class="bar"><i></i><i></i><i></i></div><img src="static/v2/dashboard.jpg" alt="티아크 실제 대시보드 화면: 건물 4곳의 상태, 지도 위 건물 위치, 지금 볼 건물, 최근 7일 알람 추이" loading="lazy"></div>
+      <div class="device reveal"><div class="bar"><i></i><i></i><i></i></div><picture><source srcset="static/v2/dashboard.avif" type="image/avif"><source srcset="static/v2/dashboard.webp" type="image/webp"><img src="static/v2/dashboard.jpg" alt="티아크 실제 대시보드 화면: 건물 4곳의 상태, 지도 위 건물 위치, 지금 볼 건물, 최근 7일 알람 추이" loading="lazy"></picture></div>
     </div>
   </div>
 </section>
@@ -551,28 +556,29 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   <div class="sc-pin">
     <div class="sc-text">
       <div class="eb"><i></i><span class="en">ARCHITECTURE</span>· 티아크 구조</div>
-      <div class="sc-meta"><b class="sc-idx"><b>01</b></b><span>/ 08</span><span class="sc-bar"><i></i></span></div>
+      <div class="sc-meta"><b class="sc-idx"><b>01</b></b><span>/ 09</span><span class="sc-bar"><i></i></span></div>
       <div class="sc-caps">
         <div class="sc-cap on"><span class="k">01 · 신호 하나</span><h3>건물의 모든 판단은<br>신호 하나에서 시작합니다.</h3><p>냉수 온도 하나, 댐퍼 개도 하나. 설비는 쉬지 않고 값을 남깁니다.</p></div>
         <div class="sc-cap"><span class="k">02 · 설비</span><h3>신호가 모이면<br>설비가 보입니다.</h3><p>공조기 한 대에도 온도·압력·댐퍼·팬 운전 같은 관제점이 수십 개 붙어 있습니다.</p></div>
-        <div class="sc-cap"><span class="k">03 · T-ARCH EDGE</span><h3>T-ARCH EDGE가<br>읽습니다.</h3><p>현장 미니PC가 기존 자동제어(BACnet/IP 등)에 붙어 15분마다 데이터를 읽습니다. 명령은 보내지 않습니다.</p></div>
-        <div class="sc-cap"><span class="k">04 · 건물</span><h3>설비가 모이면<br>건물이 됩니다.</h3><p>인천의 한 복합시설에는 관제점 312개, 경기도의 한 종합병원에는 2,075개가 있습니다.</p></div>
-        <div class="sc-cap"><span class="k">05 · T-ARCH 클라우드</span><h3>믿을 수 있는 값으로만<br>판정합니다.</h3><p>값이 믿을 만한지 먼저 확인하고, 규칙으로 판정해 근거와 함께 보고합니다. 근거가 부족하면 "판단 불가"라고 말합니다.</p></div>
-        <div class="sc-cap"><span class="k">06 · 여러 건물</span><h3>건물 하나에서,<br>여러 건물로.</h3><p>지금 병원·업무시설 등 5곳에서 단계적으로 실증하고 있습니다.</p></div>
+        <div class="sc-cap"><span class="k">03 · 기계실 → 방재실</span><h3>기계실의 신호는<br>방재실로 모입니다.</h3><p>설비마다 붙은 자동제어반(DDC)이 값을 모아 방재실의 중앙감시로 보냅니다. 여기까지는 지금 건물에 이미 있는 그대로입니다.</p></div>
+        <div class="sc-cap"><span class="k">04 · T-ARCH EDGE</span><h3>방재실에서<br>T-ARCH EDGE가 읽습니다.</h3><p>중앙감시 옆에 현장 미니PC 하나를 둡니다. BACnet/IP 등으로 15분마다 읽기만 하고, 명령은 보내지 않습니다.</p></div>
+        <div class="sc-cap"><span class="k">05 · 건물</span><h3>설비가 모이면<br>건물이 됩니다.</h3><p>인천의 한 복합시설에는 관제점 312개, 경기도의 한 종합병원에는 2,075개가 있습니다.</p></div>
+        <div class="sc-cap"><span class="k">06 · T-ARCH 클라우드</span><h3>클라우드에서 판정하고,<br>화면으로 보여드립니다.</h3><p>값이 믿을 만한지 먼저 확인하고 규칙으로 판정한 뒤, 근거와 함께 대시보드와 현장 앱에 보여드립니다. 근거가 부족하면 "판단 불가"라고 말합니다.</p></div>
+        <div class="sc-cap"><span class="k">07 · 여러 건물</span><h3>건물 하나에서,<br>여러 건물로.</h3><p>지금 병원·업무시설 등 5곳에서 단계적으로 실증하고 있습니다.</p></div>
         <div class="sc-cap"><span class="k v">VISION</span><h3>그리고<br>한국의 건물로.</h3><p>건물 하나의 데이터가 쌓여 도시의 기준이 되고, 한국 건물 운영의 중심축이 되는 것. 텍톤이 가려는 방향입니다.</p></div>
-        <div class="sc-cap"><span class="k">08 · 오늘 볼 것</span><h3>그래도 사람이 볼 것은<br>단순해야 합니다.</h3><p>수천 개의 신호에서 오늘 볼 것만 남깁니다. T-ARCH, 건물의 중심축.</p></div>
+        <div class="sc-cap"><span class="k">09 · 오늘 볼 것</span><h3>그래도 사람이 볼 것은<br>단순해야 합니다.</h3><p>수천 개의 신호에서 오늘 볼 것만 남깁니다. T-ARCH, 건물의 중심축.</p></div>
       </div>
     </div>
-    <div class="sc-canvas"><canvas aria-hidden="true"></canvas></div>
+    <div class="sc-canvas"><canvas aria-hidden="true"></canvas><figure class="sc-dash" aria-hidden="true"><figcaption><span>T-ARCH CLOUD</span>실제 대시보드 화면 · 건물명 가림</figcaption><picture><source srcset="static/v2/dashboard.avif" type="image/avif"><source srcset="static/v2/dashboard.webp" type="image/webp"><img src="static/v2/dashboard.jpg" alt="" loading="lazy" width="1454" height="814"></picture></figure></div>
   </div>
 </section>
 <section class="archd" id="architecture" aria-label="티아크 구조도">
   <div class="wrap">
     <h3 class="t">한눈에 보는 티아크 구조</h3>
     <div class="arch-row">
-      <div class="ab"><div class="k">EXISTING</div><h4>기존 자동제어</h4><ul><li>중앙감시 · DDC</li><li>BACnet/IP · BACnet MS/TP · Modbus</li><li>교체·공사 없음</li></ul></div>
+      <div class="ab"><div class="k">EXISTING · 기계실 → 방재실</div><h4>기존 자동제어</h4><ul><li>기계실 자동제어반(DDC)</li><li>방재실 중앙감시</li><li>BACnet/IP · BACnet MS/TP · Modbus</li><li>교체·공사 없음</li></ul></div>
       <div class="ar" aria-hidden="true">→</div>
-      <div class="ab hl"><div class="k">T-ARCH EDGE</div><h4>현장 수집기</h4><ul><li>현장 미니PC 설치</li><li>15분마다 읽기</li><li>읽기 전용 · 명령 없음</li></ul></div>
+      <div class="ab hl"><div class="k">T-ARCH EDGE · 방재실</div><h4>현장 수집기</h4><ul><li>중앙감시 옆 미니PC 설치</li><li>15분마다 읽기</li><li>읽기 전용 · 명령 없음</li></ul></div>
       <div class="ar" aria-hidden="true">→</div>
       <div class="ab hl"><div class="k">T-ARCH CLOUD</div><h4>분석</h4><ul><li>값을 믿을 수 있는지 먼저 확인</li><li>규칙으로 판정, 근거와 함께 보고</li><li>경보 · 트렌드 · 통신상태 · 에너지 성과</li><li>전기요금 · 피크 · 역률 조언</li></ul></div>
       <div class="ar" aria-hidden="true">→</div>
@@ -620,11 +626,11 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
       <p class="side reveal">관리단·건물주는 결과를, 관리소장·시설직원은 오늘 할 일을 봅니다. 계정에 배정된 건물만 열립니다.<br><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 자세히 보기 →</a></p>
     </div>
     <div class="phones reveal">
-      <div class="phone"><div class="frame"><img src="static/v2/app/app-today.jpg" alt="티아크 앱 오늘 화면: 당직자, 오늘 점검 진행률, 점검 목록" loading="lazy" width="540" height="960"></div><b>오늘 할 일</b><span>당직과 오늘 점검을 한 화면에</span></div>
-      <div class="phone"><div class="frame"><img src="static/v2/app/app-asset.jpg" alt="티아크 앱 설비 화면: 소화펌프 고장 상태와 마지막 수신 시각" loading="lazy" width="540" height="960"></div><b>설비 상태</b><span>고장·이상을 근거와 함께</span></div>
-      <div class="phone"><div class="frame"><img src="static/v2/app/app-work.jpg" alt="티아크 앱 작업 화면: B2 소화펌프 이상음 작업 상세와 결과 기록" loading="lazy" width="540" height="960"></div><b>작업 기록</b><span>상태·결과·사진을 바로 남김</span></div>
-      <div class="phone"><div class="frame"><img src="static/v2/app/app-meter.jpg" alt="티아크 앱 검침 화면: 전력량계 월별 사용량과 이상 사용 표시" loading="lazy" width="540" height="960"></div><b>현장 검침</b><span>평소보다 많으면 바로 표시</span></div>
-      <div class="phone"><div class="frame"><img src="static/v2/app/app-report.jpg" alt="티아크 앱 월간 리포트 화면: 작업 상태와 유형별 건수" loading="lazy" width="540" height="960"></div><b>월간 리포트</b><span>한 달 기록이 자동으로 정리</span></div>
+      <div class="phone"><div class="frame"><picture><source srcset="static/v2/app/app-today.avif" type="image/avif"><source srcset="static/v2/app/app-today.webp" type="image/webp"><img src="static/v2/app/app-today.jpg" alt="티아크 앱 오늘 화면: 당직자, 오늘 점검 진행률, 점검 목록" loading="lazy" width="540" height="960"></picture></div><b>오늘 할 일</b><span>당직과 오늘 점검을 한 화면에</span></div>
+      <div class="phone"><div class="frame"><picture><source srcset="static/v2/app/app-asset.avif" type="image/avif"><source srcset="static/v2/app/app-asset.webp" type="image/webp"><img src="static/v2/app/app-asset.jpg" alt="티아크 앱 설비 화면: 소화펌프 고장 상태와 마지막 수신 시각" loading="lazy" width="540" height="960"></picture></div><b>설비 상태</b><span>고장·이상을 근거와 함께</span></div>
+      <div class="phone"><div class="frame"><picture><source srcset="static/v2/app/app-work.avif" type="image/avif"><source srcset="static/v2/app/app-work.webp" type="image/webp"><img src="static/v2/app/app-work.jpg" alt="티아크 앱 작업 화면: B2 소화펌프 이상음 작업 상세와 결과 기록" loading="lazy" width="540" height="960"></picture></div><b>작업 기록</b><span>상태·결과·사진을 바로 남김</span></div>
+      <div class="phone"><div class="frame"><picture><source srcset="static/v2/app/app-meter.avif" type="image/avif"><source srcset="static/v2/app/app-meter.webp" type="image/webp"><img src="static/v2/app/app-meter.jpg" alt="티아크 앱 검침 화면: 전력량계 월별 사용량과 이상 사용 표시" loading="lazy" width="540" height="960"></picture></div><b>현장 검침</b><span>평소보다 많으면 바로 표시</span></div>
+      <div class="phone"><div class="frame"><picture><source srcset="static/v2/app/app-report.avif" type="image/avif"><source srcset="static/v2/app/app-report.webp" type="image/webp"><img src="static/v2/app/app-report.jpg" alt="티아크 앱 월간 리포트 화면: 작업 상태와 유형별 건수" loading="lazy" width="540" height="960"></picture></div><b>월간 리포트</b><span>한 달 기록이 자동으로 정리</span></div>
     </div>
     <p class="fn app-note reveal">앱 화면은 예시 데이터입니다 · Google Play · App Store 출시 준비 중</p>
   </div>
@@ -886,14 +892,12 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   });})();
 </script>
 <script src="static/v2/hero.js"></script>
-<script src="static/v2/arch.js" defer></script>
-<script type="importmap">{"imports":{"three":"/static/v2/three/three.module.min.js"}}</script>
 <script type="module">
-const go2d=()=>{ if(window.startArch2D) window.startArch2D(); };
+const go2d=()=>{ const sc=document.createElement('script'); sc.src='/static/v2/arch.js'; sc.onload=()=>window.startArch2D&&window.startArch2D(); document.head.appendChild(sc); };
 const run=async()=>{ try{
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) throw 'reduced';
   const t=document.createElement('canvas'); if(!(t.getContext('webgl2')||t.getContext('webgl'))) throw 'nogl';
-  const m=await import('/static/v2/arch3d.js'); if(!m.start()) throw 'start';
+  const m=await import('/static/v2/arch3d.bundle.js'); if(!m.start()) throw 'start';
 }catch(e){ console.info('arch: 2D', e); go2d(); } };
 const scEl=document.getElementById('scale');
 if(scEl){ const io=new IntersectionObserver(es=>{ if(es.some(x=>x.isIntersecting)){ io.disconnect(); run(); } },{rootMargin:'1600px 0px'}); io.observe(scEl); }
