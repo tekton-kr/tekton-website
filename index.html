@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://tekton.co.kr/">
 <meta property="og:image" content="https://tekton.co.kr/static/v2/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="tekton_icon.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="canonical" href="https://tekton.co.kr/">
 <meta name="theme-color" content="#101619">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -273,6 +273,34 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .ft address a{text-decoration:underline;text-underline-offset:3px}
 .legal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-ink);font-size:13px;color:#7D8783}
 .legal p+p{margin-top:2px}
+
+/* ---------- APP (mobile) ---------- */
+.app-sec{background:linear-gradient(180deg,#F4F6F2 0%,#E9EDE7 100%);overflow:hidden}
+.app-head{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
+.app-head .side{font-size:16px;color:var(--t-2);line-height:1.7}
+.app-head .side a{color:var(--green-d);font-weight:700;text-decoration:none}
+.phones{display:flex;gap:clamp(14px,2vw,28px);margin-top:56px;justify-content:center;align-items:flex-end}
+.phone{flex:0 0 auto;width:clamp(150px,17vw,232px);text-align:center}
+.phone .frame{background:#0E1416;border-radius:30px;padding:9px;box-shadow:0 30px 50px -28px rgba(16,22,25,.55),0 0 0 1px rgba(16,22,25,.08)}
+.phone .frame img{border-radius:22px;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:#fff}
+.phone b{display:block;margin-top:16px;font-size:16px}
+.phone span{display:block;font-size:14px;color:var(--t-3);margin-top:2px;line-height:1.45}
+.phone:nth-child(2),.phone:nth-child(4){transform:translateY(-24px)}
+.phone:nth-child(3){transform:translateY(-44px)}
+.app-note{margin-top:28px;text-align:center}
+@media (max-width:960px){.app-head{grid-template-columns:1fr;gap:16px}.phones{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 20px;margin-left:calc(var(--gut)*-1);margin-right:calc(var(--gut)*-1);padding-left:var(--gut);padding-right:var(--gut)}.phone{scroll-snap-align:start;width:200px}.phone:nth-child(n){transform:none}}
+/* ---------- MOBILE NAV ---------- */
+.menu-btn{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);background:transparent;border-radius:2px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu-btn i{display:block;width:18px;height:2px;background:#fff;transition:transform .2s ease, opacity .2s ease}
+.nav.open .menu-btn i:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav.open .menu-btn i:nth-child(2){opacity:0}.nav.open .menu-btn i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{display:none}
+@media (max-width:900px){.menu-btn{display:inline-flex}.nav .right{display:flex;gap:10px;align-items:center}
+  .mnav{display:block;position:fixed;left:0;right:0;top:76px;background:rgba(16,22,25,.98);border-top:1px solid var(--line-ink);padding:8px var(--gut) 24px;transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease}
+  .nav.open .mnav{opacity:1;transform:none;pointer-events:auto}
+  .mnav a{display:block;padding:16px 0;border-bottom:1px solid var(--line-ink);color:#fff;text-decoration:none;font-size:18px;font-weight:600}
+  .nav.open{background:rgba(16,22,25,.98)}}
+.ft-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:14px}
+.ft-links a{color:var(--t-ink-2);text-decoration:none}.ft-links a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -280,15 +308,22 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="lockup" href="#top" aria-label="텍톤 홈"><img src="static/v2/TEKTON_clean_white.svg" alt="TEKTON 텍톤"><span class="sep"></span><img src="static/v2/T-ARCH_clean_white.svg" alt="T-ARCH 티아크"></a>
+    <div class="right">
     <ul>
       <li><a href="#problem">문제</a></li>
       <li><a href="#solution">방식</a></li>
+      <li><a href="#app">현장 앱</a></li>
       <li><a href="#case">사례</a></li>
       <li><a href="#value">효과</a></li>
       <li><a href="#start">요금</a></li>
       <li class="keep"><a class="btn primary cta" href="#start">7일 진단 신청</a></li>
     </ul>
+    <button class="menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
+    </div>
   </div>
+  <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
+    <a href="#problem">문제</a><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#value">효과</a><a href="#start">요금 · 신청</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -362,6 +397,28 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
       </div>
       <div class="device reveal"><div class="bar"><i></i><i></i><i></i></div><img src="static/v2/dashboard.jpg" alt="티아크 실제 대시보드 화면: 건물 4곳의 상태, 지도 위 건물 위치, 지금 볼 건물, 최근 7일 알람 추이" loading="lazy"></div>
     </div>
+  </div>
+</section>
+
+<!-- 3-b. MOBILE APP -->
+<section class="sec app-sec" id="app">
+  <div class="wrap">
+    <div class="app-head">
+      <div>
+        <div class="eb reveal"><i></i><span class="en">MOBILE</span>· 현장 앱</div>
+        <h2 class="reveal">현장에서는<br>휴대폰 하나로.</h2>
+        <p class="lead reveal">알람 확인부터 점검·작업·검침·월간 리포트까지. 관리소장과 시설직원이 같은 화면에서 같은 기록을 남깁니다.</p>
+      </div>
+      <p class="side reveal">관리단·건물주는 결과를, 관리소장·시설직원은 오늘 할 일을 봅니다. 계정에 배정된 건물만 열립니다.<br><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 자세히 보기 →</a></p>
+    </div>
+    <div class="phones reveal">
+      <div class="phone"><div class="frame"><img src="static/v2/app/app-today.jpg" alt="티아크 앱 오늘 화면: 당직자, 오늘 점검 진행률, 점검 목록" loading="lazy" width="540" height="960"></div><b>오늘 할 일</b><span>당직과 오늘 점검을 한 화면에</span></div>
+      <div class="phone"><div class="frame"><img src="static/v2/app/app-asset.jpg" alt="티아크 앱 설비 화면: 소화펌프 고장 상태와 마지막 수신 시각" loading="lazy" width="540" height="960"></div><b>설비 상태</b><span>고장·이상을 근거와 함께</span></div>
+      <div class="phone"><div class="frame"><img src="static/v2/app/app-work.jpg" alt="티아크 앱 작업 화면: B2 소화펌프 이상음 작업 상세와 결과 기록" loading="lazy" width="540" height="960"></div><b>작업 기록</b><span>상태·결과·사진을 바로 남김</span></div>
+      <div class="phone"><div class="frame"><img src="static/v2/app/app-meter.jpg" alt="티아크 앱 검침 화면: 전력량계 월별 사용량과 이상 사용 표시" loading="lazy" width="540" height="960"></div><b>현장 검침</b><span>평소보다 많으면 바로 표시</span></div>
+      <div class="phone"><div class="frame"><img src="static/v2/app/app-report.jpg" alt="티아크 앱 월간 리포트 화면: 작업 상태와 유형별 건수" loading="lazy" width="540" height="960"></div><b>월간 리포트</b><span>한 달 기록이 자동으로 정리</span></div>
+    </div>
+    <p class="fn app-note reveal">앱 화면은 예시 데이터입니다 · Google Play · App Store 출시 준비 중</p>
   </div>
 </section>
 
@@ -547,6 +604,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <div class="ft">
       <div>
         <a class="lockup" href="#top"><img src="static/v2/TEKTON_clean_white.svg" alt="TEKTON 텍톤"><span class="sep"></span><img src="static/v2/T-ARCH_clean_white.svg" alt="T-ARCH 티아크"></a>
+        <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a></div>
         <address>텍톤(TEKTON) · 대표 최경록 · <span style="white-space:nowrap">사업자등록번호 720-03-03738</span><br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
       </div>
       <div style="max-width:360px"><b style="color:#fff;font-size:16px">"정상"이라는 보고도, 데이터로 확인합니다.</b><p style="margin-top:8px">티아크(T-ARCH)는 텍톤이 만드는 건물 설비 AI 진단 서비스입니다.</p></div>
@@ -560,6 +618,9 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 </footer>
 
 <script>
+// mobile menu
+(()=>{const n=document.getElementById('nav'),b=n.querySelector('.menu-btn');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');});
+  n.querySelectorAll('.mnav a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');}));})();
 // nav background on scroll
 (()=>{const n=document.getElementById('nav');const f=()=>n.classList.toggle('solid',scrollY>40);f();addEventListener('scroll',f,{passive:true});})();
 // reveal + count-up
