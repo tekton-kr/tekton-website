@@ -343,9 +343,15 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 .dl:hover{background:var(--t-1);color:#fff}
 .dl small{font-weight:500;color:inherit;opacity:.65;font-size:13.5px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--green);color:var(--ink);padding:12px 18px;font-weight:700;text-decoration:none;border-radius:2px}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--green-d);outline-offset:3px}
+.dark :focus-visible,.hero :focus-visible,.nav :focus-visible,footer :focus-visible,.vision :focus-visible{outline-color:var(--green)}
 </style>
 </head>
 <body>
+<a class="skip" href="#problem">본문 바로가기</a>
 
 <header class="nav" id="nav">
   <div class="wrap">
@@ -461,7 +467,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     </div>
     <p class="fn reveal" style="margin-top:14px">티아크는 법정 점검을 대신하지 않습니다. 점검과 점검 사이를 채웁니다.</p>
     <div class="conn" id="connect">
-      <div class="reveal"><div class="k">CONNECT · 연동</div><h3>제조사와 관계없이 연결</h3><p>표준 통신 방식을 쓰는 중앙감시·자동제어라면 제조사와 관계없이 연결합니다.</p><div class="tags"><span>BACnet/IP</span><span>BACnet MS/TP</span><span>Modbus</span></div><p style="margin-top:14px">지멘스 · 하니웰 · 존슨컨트롤즈 · 국내 DDC 연결 가능</p></div>
+      <div class="reveal"><div class="k">CONNECT · 연동</div><h3>제조사가 달라도 연결됩니다</h3><p>자동제어 장비는 정해진 '공용 언어'로 데이터를 주고받습니다. 대표적인 것이 <b>BACnet</b>(빌딩 자동제어 국제 표준)과 <b>Modbus</b>(설비 업계 공용 방식)입니다. 이 언어를 쓰는 시스템이라면 제조사와 관계없이 연결합니다.</p><div class="tags"><span>BACnet/IP</span><span>BACnet MS/TP</span><span>Modbus</span></div><p style="margin-top:14px">연결 가능: 지멘스 · 하니웰 · 존슨컨트롤즈 · 국내 DDC</p><p class="fn" style="margin-top:10px">우리 건물이 어떤 방식인지 모르셔도 됩니다. 자동제어 업체에 "BACnet이나 Modbus 되나요?" 한 마디면 확인되고, 저희가 대신 확인해 드려도 됩니다.</p></div>
       <div class="reveal"><div class="k">SECURITY · 보안</div><h3>읽기만 합니다</h3><p>제어 명령을 보내지 않아 운전·설정이 바뀌지 않고, 운영을 멈추지 않고 적용합니다. 현장 수집기(엣지)가 건물 안에서 수집하며 폐쇄망에도 대응합니다.</p></div>
       <div class="reveal"><div class="k">DATA · 수집 범위</div><h3>설비 운전 데이터만</h3><p>온도·압력·밸브·댐퍼처럼 설비가 남기는 운전 데이터만 수집합니다. 영상·음성·개인정보는 수집하지 않습니다.</p></div>
     </div>
@@ -685,7 +691,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
       <a class="dl reveal" href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">티아크 소개서 받기 <small>PDF · 3.4MB</small></a>
     </div>
     <div class="faq reveal">
-      <details><summary>우리 건물 자동제어에도 연결되나요?</summary><div class="a">네. BACnet/IP, BACnet MS/TP, Modbus 같은 표준 방식을 쓰는 시스템이라면 제조사와 관계없이 연결합니다. 지멘스·하니웰·존슨컨트롤즈·국내 DDC 모두 연결할 수 있습니다. 오래된 시스템은 통신 방식부터 7일 진단 전에 먼저 확인해 드립니다.</div></details>
+      <details><summary>우리 건물 자동제어에도 연결되나요?</summary><div class="a">표준 방식을 쓰는 시스템이라면 됩니다. 자동제어 장비들은 BACnet(빌딩 자동제어 국제 표준)이나 Modbus(설비 업계 공용 방식) 같은 '공용 언어'로 데이터를 주고받습니다. 이 언어를 쓰는 시스템이라면 지멘스·하니웰·존슨컨트롤즈·국내 DDC 등 제조사와 관계없이 연결합니다. 우리 건물이 어떤 방식인지 모르셔도 괜찮습니다. 7일 진단 전에 저희가 자동제어 업체와 먼저 확인해 드립니다.</div></details>
       <details><summary>운전에 영향이 있나요?</summary><div class="a">없습니다. 읽기 전용으로 연결해 제어 명령을 보내지 않고, 운전·설정을 바꾸지 않습니다. 운영을 멈추지 않고 적용합니다.</div></details>
       <details><summary>현장에 무엇을 설치하나요?</summary><div class="a">설비 교체나 공사는 없습니다. 데이터를 모으는 현장 수집기(엣지)만 설치하며, 폐쇄망 건물에도 대응합니다.</div></details>
       <details><summary>결과는 언제 나오나요?</summary><div class="a">기존 자동제어 데이터로 7일이면 첫 결과가 나옵니다. 숨은 문제, 추정 낭비, 먼저 손볼 곳을 근거와 함께 설명드립니다.</div></details>
