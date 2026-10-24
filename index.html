@@ -301,6 +301,48 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   .nav.open{background:rgba(16,22,25,.98)}}
 .ft-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:14px}
 .ft-links a{color:var(--t-ink-2);text-decoration:none}.ft-links a:hover{color:#fff}
+
+/* ---------- COMPARE + CONNECT ---------- */
+.cmp-wrap{margin-top:48px;overflow-x:auto;border:1px solid var(--line);background:var(--white)}
+.cmp{width:100%;min-width:720px;border-collapse:collapse;font-size:16px;line-height:1.55}
+.cmp th,.cmp td{padding:20px 22px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmp thead th{font-size:15px;color:var(--t-3);font-weight:600;background:#FAFBF9}
+.cmp tbody th{font-weight:600;color:var(--t-2);width:16%;white-space:nowrap}
+.cmp td{color:var(--t-2)}
+.cmp .us{background:#F1F8EE;color:var(--t-1);font-weight:600;border-left:3px solid var(--green-d)}
+.cmp thead .us{color:var(--green-d);font-size:16px}
+.conn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+.conn>div{background:var(--white);border:1px solid var(--line);padding:26px 24px}
+.conn .k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--t-3)}
+.conn h3{margin-top:10px;font-size:19px}
+.conn p{margin-top:10px;font-size:15.5px;color:var(--t-2);line-height:1.6}
+.conn .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.conn .tags span{font-family:var(--mono);font-size:12.5px;padding:5px 9px;border:1px solid var(--line);color:var(--t-1)}
+@media (max-width:960px){.conn{grid-template-columns:1fr}}
+@media (max-width:700px){.cmp{min-width:0;font-size:15px}.cmp th,.cmp td{padding:14px 12px}.cmp tr>*:nth-child(2){display:none}.cmp tbody th{white-space:normal;width:24%}}
+.app-sec{border-top:1px solid var(--line)}
+/* ---------- VISION ---------- */
+.vision{padding:clamp(88px,11vw,148px) 0;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.vision::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 85% 20%,rgba(70,255,22,.10),transparent 60%)}
+.vision .wrap{position:relative}
+.vision blockquote{font-size:clamp(28px,3.8vw,50px);line-height:1.3;letter-spacing:-.03em;font-weight:700;max-width:980px;margin-top:22px}
+.vision blockquote .was{color:var(--t-ink-3)}
+.vision .shift{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:40px;font-size:clamp(17px,1.5vw,20px);color:var(--t-ink-2)}
+.vision .shift b{color:#fff;font-weight:600}.vision .shift .arr{color:var(--green);font-family:var(--mono)}
+/* ---------- FAQ ---------- */
+.faq-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.faq{margin-top:44px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:26px 48px 26px 0;font-size:clamp(18px,1.5vw,21px);font-weight:600;position:relative;line-height:1.45}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:14px;height:14px;margin-top:-10px;border-right:2px solid var(--t-1);border-bottom:2px solid var(--t-1);transform:rotate(45deg);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq .a{padding:0 48px 28px 0;font-size:17px;line-height:1.75;color:var(--t-2);max-width:860px}
+.dl{display:inline-flex;align-items:center;gap:12px;padding:16px 22px;border:1.5px solid var(--t-1);color:var(--t-1);text-decoration:none;font-weight:700;font-size:16px;border-radius:2px}
+.dl:hover{background:var(--t-1);color:#fff}
+.dl small{font-weight:500;color:inherit;opacity:.65;font-size:13.5px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
 <body>
@@ -322,7 +364,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     </div>
   </div>
   <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
-    <a href="#problem">문제</a><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#value">효과</a><a href="#start">요금 · 신청</a>
+    <a href="#problem">문제</a><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#value">효과</a><a href="#start">요금 · 신청</a><a href="#faq">자주 묻는 질문</a>
   </nav>
 </header>
 
@@ -396,6 +438,32 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
         <p class="fn" style="margin-top:22px">실제 화면(2026년 10월) · 건물명은 가림 처리</p>
       </div>
       <div class="device reveal"><div class="bar"><i></i><i></i><i></i></div><img src="static/v2/dashboard.jpg" alt="티아크 실제 대시보드 화면: 건물 4곳의 상태, 지도 위 건물 위치, 지금 볼 건물, 최근 7일 알람 추이" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3-a. COMPARE + CONNECT -->
+<section class="sec" id="compare">
+  <div class="wrap">
+    <div class="eb reveal"><i></i><span class="en">COMPARE</span>· 무엇이 다른가</div>
+    <h2 class="reveal">1년에 한 번 보던 것을,<br><span class="g">매일</span> 봅니다.</h2>
+    <p class="lead reveal">점검은 그날의 상태를 봅니다. 티아크는 점검과 점검 사이, 설비가 실제로 어떻게 돌았는지를 봅니다.</p>
+    <div class="cmp-wrap reveal">
+      <table class="cmp">
+        <thead><tr><th scope="col"><span class="sr-only">구분</span></th><th scope="col">법정 성능점검</th><th scope="col">정기 점검</th><th scope="col" class="us">티아크(T-ARCH)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">확인 주기</th><td>연 1회</td><td>연 12회</td><td class="us">365일 24시간</td></tr>
+          <tr><th scope="row">확인 방식</th><td>사람이 방문</td><td>사람이 방문</td><td class="us">기존 자동제어 데이터를 상시 분석</td></tr>
+          <tr><th scope="row">데이터 검증</th><td>점검자 판단</td><td>점검자 판단</td><td class="us">신선도·고착·급변을 검증한 뒤 판정</td></tr>
+          <tr><th scope="row">결과물</th><td>점검 보고서</td><td>점검표</td><td class="us">근거가 붙은 리포트와 현장 앱 기록</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fn reveal" style="margin-top:14px">티아크는 법정 점검을 대신하지 않습니다. 점검과 점검 사이를 채웁니다.</p>
+    <div class="conn" id="connect">
+      <div class="reveal"><div class="k">CONNECT · 연동</div><h3>쓰고 계신 자동제어에 그대로</h3><p>표준 통신 방식으로 기존 중앙감시·자동제어에 연결합니다.</p><div class="tags"><span>BACnet/IP</span><span>BACnet MS/TP</span><span>Modbus</span></div><p style="margin-top:14px">연결 실적: 지멘스 · 하니웰 · 국내 DDC</p></div>
+      <div class="reveal"><div class="k">SECURITY · 보안</div><h3>읽기만 합니다</h3><p>제어 명령을 보내지 않아 운전·설정이 바뀌지 않고, 운영을 멈추지 않고 적용합니다. 현장 수집기(엣지)가 건물 안에서 수집하며 폐쇄망에도 대응합니다.</p></div>
+      <div class="reveal"><div class="k">DATA · 수집 범위</div><h3>설비 운전 데이터만</h3><p>온도·압력·밸브·댐퍼처럼 설비가 남기는 운전 데이터만 수집합니다. 영상·음성·개인정보는 수집하지 않습니다.</p></div>
     </div>
   </div>
 </section>
@@ -537,6 +605,15 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
   </div>
 </section>
 
+<!-- 6-b. VISION -->
+<section class="vision" id="vision">
+  <div class="wrap">
+    <div class="eb reveal"><i></i><span class="en">VISION</span>· 텍톤이 바꾸려는 것</div>
+    <blockquote class="reveal"><span class="was">유지보수는 고장 나면 부르는 일이었습니다.</span><br>이제 <span style="color:var(--green)">매일 확인하는 일</span>이 됩니다.</blockquote>
+    <div class="shift reveal"><span>공사하고 끝나는 유지보수</span><span class="arr">→</span><b>데이터로 지속 관리하는 유지보수</b></div>
+  </div>
+</section>
+
 <!-- 7. WHO -->
 <section class="sec white" id="who">
   <div class="wrap">
@@ -597,6 +674,26 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <div class="creds reveal"><span><b>2026</b>환경부 에코스타트업 선정</span><span><b>특허</b>출원 2건</span><span><b>실증</b>병원·업무시설 등 5곳</span></div>
   </div>
 </section>
+<!-- 9. FAQ -->
+<section class="sec white" id="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <div>
+        <div class="eb reveal"><i></i><span class="en">FAQ</span>· 자주 묻는 질문</div>
+        <h2 class="reveal">도입 전에 많이 물으십니다.</h2>
+      </div>
+      <a class="dl reveal" href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">티아크 소개서 받기 <small>PDF · 3.4MB</small></a>
+    </div>
+    <div class="faq reveal">
+      <details><summary>우리 건물 자동제어에도 연결되나요?</summary><div class="a">BACnet/IP, BACnet MS/TP, Modbus 같은 표준 방식으로 연결합니다. 지멘스·하니웰·국내 DDC에 연결한 실적이 있습니다. 모델과 구성은 현장마다 달라 7일 진단 전에 먼저 확인해 드립니다.</div></details>
+      <details><summary>운전에 영향이 있나요?</summary><div class="a">없습니다. 읽기 전용으로 연결해 제어 명령을 보내지 않고, 운전·설정을 바꾸지 않습니다. 운영을 멈추지 않고 적용합니다.</div></details>
+      <details><summary>현장에 무엇을 설치하나요?</summary><div class="a">설비 교체나 공사는 없습니다. 데이터를 모으는 현장 수집기(엣지)만 설치하며, 폐쇄망 건물에도 대응합니다.</div></details>
+      <details><summary>결과는 언제 나오나요?</summary><div class="a">기존 자동제어 데이터로 7일이면 첫 결과가 나옵니다. 숨은 문제, 추정 낭비, 먼저 손볼 곳을 근거와 함께 설명드립니다.</div></details>
+      <details><summary>비용은 어느 정도인가요?</summary><div class="a">월 89만~119만원 수준입니다. 건물 전체 관제점 기준이며 부가세 별도입니다. 수억 원대 시스템 구축이 아닙니다.</div></details>
+      <details><summary>이상이 아닌 것까지 이상이라고 하진 않나요?</summary><div class="a">데이터를 믿어도 되는지부터 검증하고, 근거가 부족하면 "확인 중"으로 따로 표시합니다. 현장 확인 결과 이상이 아니었던 것도 정정해서 보고합니다.</div></details>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -604,8 +701,8 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <div class="ft">
       <div>
         <a class="lockup" href="#top"><img src="static/v2/TEKTON_clean_white.svg" alt="TEKTON 텍톤"><span class="sep"></span><img src="static/v2/T-ARCH_clean_white.svg" alt="T-ARCH 티아크"></a>
-        <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a></div>
-        <address>텍톤(TEKTON) · 대표 최경록 · <span style="white-space:nowrap">사업자등록번호 720-03-03738</span><br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
+        <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="#faq">자주 묻는 질문</a><a href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">소개서 PDF</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a></div>
+        <address>텍톤(TEKTON) · 대표 최경록 · <span style="white-space:nowrap">사업자등록번호 720-03-03738</span><br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="tel:0236629430">02-3662-9430</a> · <a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
       </div>
       <div style="max-width:360px"><b style="color:#fff;font-size:16px">"정상"이라는 보고도, 데이터로 확인합니다.</b><p style="margin-top:8px">티아크(T-ARCH)는 텍톤이 만드는 건물 설비 AI 진단 서비스입니다.</p></div>
     </div>
