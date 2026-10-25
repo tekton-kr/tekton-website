@@ -124,6 +124,9 @@ section{position:relative}
 .kpi .l{font-size:16px;color:var(--t-2);margin-top:12px;line-height:1.55}
 .dark .kpi .l{color:var(--t-ink-2)}
 .risk{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;margin-top:56px;padding:20px 24px;background:var(--ink);color:#fff;font-size:15px}
+.hero .eb{color:rgba(255,255,255,.9);text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.chart-h{margin-bottom:6px}.chart-h b{display:block;font-size:15px;font-weight:700;color:#101619}.chart-h span{display:block;margin-top:4px;font-size:12.5px;color:#5C6662}
+@media (max-width:600px){.risk{gap:10px 8px;padding:18px 18px}.risk b{width:100%;margin-bottom:2px}.risk .sep{display:none}.risk span{border:1px solid rgba(255,255,255,.28);padding:5px 12px;border-radius:999px;font-size:14.5px}.chart svg .val{font-size:30px}.chart svg .gapv{font-size:24px}.price .amt{font-size:34px;white-space:nowrap}.price .amt small{font-size:15px}.chart svg .val2{font-size:25px}.chart svg .ax{font-size:23px}.chart svg .side{display:none}.chart-h b{font-size:16px}.chart-h span{font-size:13px}.ft-links{gap:2px 20px}.ft-links a{display:inline-block;padding:9px 0}.form details summary{padding:8px 0}.sc-dash figcaption{display:none}}
 .risk b{color:var(--green);font-weight:700;margin-right:6px}
 .risk span{color:var(--t-ink-2)}
 @media (max-width:860px){.pains,.kpis{grid-template-columns:1fr}}
@@ -535,7 +538,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
       <div class="kpi reveal"><div class="n"><span data-count="312">312</span><small>개</small></div><div class="l">한 시설에서 매일 읽어야 할<br>자동제어 관제점 수</div></div>
     </div>
     <p class="fn reveal" style="margin-top:20px">인천 복합시설 실제 사례(2026년 6~8월)의 값입니다.</p>
-    <div class="risk reveal"><b>방치하면</b><span>예상치 못한 수선비</span><span>·</span><span>임차인 클레임</span><span>·</span><span>에너지 낭비</span><span>·</span><span>자산가치 하락</span></div>
+    <div class="risk reveal"><b>방치하면</b><span>예상치 못한 수선비</span><span class="sep">·</span><span>임차인 클레임</span><span class="sep">·</span><span>에너지 낭비</span><span class="sep">·</span><span>자산가치 하락</span></div>
   </div>
 </section>
 
@@ -641,7 +644,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     </div>
     <p class="fn reveal" style="margin-top:14px">티아크는 법정 점검을 대신하지 않습니다. 점검과 점검 사이를 채웁니다.</p>
     <div class="conn" id="connect">
-      <div class="reveal"><div class="k">CONNECT · 연동</div><h3>제조사가 달라도 연결됩니다</h3><p>자동제어 장비는 정해진 '공용 언어'로 데이터를 주고받습니다. 대표적인 것이 <b>BACnet</b>(빌딩 자동제어 국제 표준)과 <b>Modbus</b>(설비 업계 공용 방식)입니다. 이 언어를 쓰는 시스템이라면 제조사와 관계없이 연결합니다.</p><div class="tags"><span>BACnet/IP</span><span>BACnet MS/TP</span><span>Modbus</span></div><p style="margin-top:14px">연결 가능: 지멘스 · 하니웰 · 존슨컨트롤즈 · 국내 DDC</p><p class="fn" style="margin-top:10px">우리 건물이 어떤 방식인지 모르셔도 됩니다. 자동제어 업체에 "BACnet이나 Modbus 되나요?" 한 마디면 확인되고, 저희가 대신 확인해 드려도 됩니다.</p></div>
+      <div class="reveal"><div class="k">CONNECT · 연동</div><h3>제조사가 달라도 연결됩니다</h3><p>자동제어 장비는 정해진 '공용 언어'로 데이터를 주고받습니다. 대표적인 것이 <b>BACnet</b>(빌딩 자동제어 국제 표준)과 <b>Modbus</b>(설비 업계 공용 방식)입니다. 이 언어를 쓰는 시스템이라면 제조사와 관계없이 연결합니다.</p><div class="tags"><span>BACnet/IP</span><span>BACnet MS/TP</span><span>Modbus</span></div><p style="margin-top:14px">연결 가능: 지멘스 · 하니웰 · 존슨컨트롤즈 · <span style="white-space:nowrap">국내 DDC</span></p><p class="fn" style="margin-top:10px">우리 건물이 어떤 방식인지 모르셔도 됩니다. 자동제어 업체에 "BACnet이나 Modbus 되나요?" 한 마디면 확인되고, 저희가 대신 확인해 드려도 됩니다.</p></div>
       <div class="reveal"><div class="k">SECURITY · 보안</div><h3>읽기만 합니다</h3><p>제어 명령을 보내지 않아 운전·설정이 바뀌지 않고, 운영을 멈추지 않고 적용합니다. 현장 수집기(엣지)가 건물 안에서 수집하며 폐쇄망에도 대응합니다.</p></div>
       <div class="reveal"><div class="k">DATA · 수집 범위</div><h3>설비 운전 데이터만</h3><p>온도·압력·밸브·댐퍼처럼 설비가 남기는 운전 데이터만 수집합니다. 영상·음성·개인정보는 수집하지 않습니다.</p></div>
     </div>
@@ -700,7 +703,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
 <section class="sec white" id="value">
   <div class="wrap">
     <div class="eb reveal"><i></i><span class="en">CASE</span>· 실측 데이터로 찾아낸 것</div>
-    <h2 class="reveal">공조기 17대 중 <span class="r num">14대</span>가<br>외기를 필요 이상 들이고 있었습니다.</h2>
+    <h2 class="reveal">공조기 17대 중 <span class="r num">14대</span>가<br>외기를 필요 이상 <span style="white-space:nowrap">들이고 있었습니다.</span></h2>
     <p class="lead reveal">운영 중인 병원의 7일간 자동제어 데이터로 계산했습니다. 센서 추가 없이 기존 온도·풍량 값만 썼습니다.</p>
     <div class="value">
       <div class="reveal">
@@ -714,27 +717,26 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
         <div class="what"><b>무슨 일이 있었나</b><p>화면의 외기 댐퍼는 <b class="num" style="display:inline;color:inherit;font-size:inherit">30%</b>인데, 실제 외기는 최대 <b class="r num" style="display:inline;font-size:inherit">90%</b>. 찬 바깥 공기를 필요 이상 들여와 다시 데우는 데 가스를 쓰고 있었습니다. 공조기 17대 중 14대가 그랬습니다.</p></div>
       </div>
       <div class="chart reveal">
-        <svg viewBox="0 0 560 360" role="img" aria-label="공조기 연간 에너지비 비교: 지금 운전 그대로 3.06억원, 외기 제어가 정상일 때 2.77억원, 차이 2,910만원">
-          <text x="0" y="18" font-size="15" font-weight="700" fill="#101619">공조기 연간 에너지비 비교</text>
-          <text x="0" y="40" font-size="12.5" fill="#5C6662">부가세 별도 · 공조기 17대의 팬·냉방·난방 에너지 (전기+가스)</text>
-          <line x1="40" y1="320" x2="520" y2="320" stroke="#101619" stroke-width="1.5"/>
+        <div class="chart-h"><b>공조기 연간 에너지비 비교</b><span>부가세 별도 · 공조기 17대의 팬·냉방·난방 에너지 <span style="display:inline;white-space:nowrap">(전기+가스)</span></span></div>
+        <svg viewBox="0 54 560 306" role="img" aria-label="공조기 연간 에너지비 비교: 지금 운전 그대로 3.06억원, 외기 제어가 정상일 때 2.77억원, 차이 2,910만원">
+                              <line x1="40" y1="320" x2="520" y2="320" stroke="#101619" stroke-width="1.5"/>
           <!-- bar 1: 3.06억 -->
           <rect class="bar" x="90" y="92" width="130" height="228" fill="#101619"/>
-          <text x="155" y="80" font-size="22" font-weight="700" text-anchor="middle" fill="#101619" style="font-variant-numeric:tabular-nums">3.06억원</text>
+          <text class="val" x="155" y="80" font-size="22" font-weight="700" text-anchor="middle" fill="#101619" style="font-variant-numeric:tabular-nums">3.06억원</text>
           <!-- bar 2: 2.77억 -->
           <rect class="bar" x="320" y="183" width="130" height="137" fill="#1F7A0C"/>
           <rect x="320" y="92" width="130" height="91" fill="#C8331C" opacity=".10"/>
           <rect x="320" y="92" width="130" height="91" fill="none" stroke="#C8331C" stroke-width="2" stroke-dasharray="6 5"/>
           <line x1="220" y1="92" x2="320" y2="92" stroke="#9AA39F" stroke-dasharray="3 4"/>
-          <text x="385" y="145" font-size="21" font-weight="800" text-anchor="middle" fill="#C8331C" style="font-variant-numeric:tabular-nums">2,910만원</text>
-          <text x="385" y="212" font-size="18" font-weight="700" text-anchor="middle" fill="#fff" style="font-variant-numeric:tabular-nums">2.77억원</text>
-          <text x="462" y="128" font-size="13" font-weight="700" fill="#C8331C">연간 추정 낭비</text>
-          <text x="462" y="146" font-size="12.5" fill="#5C6662">하루 약 8만원꼴</text>
+          <text class="gapv" x="385" y="145" font-size="21" font-weight="800" text-anchor="middle" fill="#C8331C" style="font-variant-numeric:tabular-nums">2,910만원</text>
+          <text class="val2" x="385" y="212" font-size="18" font-weight="700" text-anchor="middle" fill="#fff" style="font-variant-numeric:tabular-nums">2.77억원</text>
+          <text class="side" x="462" y="128" font-size="13" font-weight="700" fill="#C8331C">연간 추정 낭비</text>
+          <text class="side" x="462" y="146" font-size="12.5" fill="#5C6662">하루 약 8만원꼴</text>
           <!-- axis break -->
           <path d="M80 268 q10 -8 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" stroke="#F4F6F2" stroke-width="6" fill="none"/>
           <path d="M310 268 q10 -8 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" stroke="#F4F6F2" stroke-width="6" fill="none"/>
-          <text x="155" y="344" font-size="14" font-weight="600" text-anchor="middle" fill="#101619">지금 운전 그대로</text>
-          <text x="385" y="344" font-size="14" font-weight="600" text-anchor="middle" fill="#101619">외기 제어가 정상일 때</text>
+          <text class="ax" x="155" y="344" font-size="14" font-weight="600" text-anchor="middle" fill="#101619">지금 운전 그대로</text>
+          <text class="ax" x="385" y="344" font-size="14" font-weight="600" text-anchor="middle" fill="#101619">외기 제어가 정상일 때</text>
         </svg>
         <p class="cap">차이를 잘 보이게 하려고 세로축 2.5억원 아래를 생략했습니다(물결 표시). 가장 낭비가 컸던 날(10/20)을 365일로 환산한 값이며, 7일 평균 기준이면 연 약 1,320만원입니다.</p>
       </div>
@@ -801,7 +803,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
     <div class="who">
       <div class="card reveal"><span class="role">OWNER</span><h3>건물주·운영사</h3><q>관리비가 어디로 새는지 보인다</q><ul><li>매달 설비 상태 보고를 받는다</li><li>큰 고장 전에 징후를 먼저 파악</li><li>설비 교체 없이 기존 시스템 위에서 시작</li></ul></div>
       <div class="card reveal"><span class="role">PM · FM</span><h3>관리회사</h3><q>제안이 설득력을 갖는다</q><ul><li>월간 운영보고서에 데이터 근거</li><li>수선·교체 제안에 객관적 근거</li><li>인수 시점 상태 기록으로 책임 구분</li></ul></div>
-      <div class="card reveal"><span class="role">SITE</span><h3>현장 기술팀</h3><q>경험이 건물의 기록이 된다</q><ul><li>정상처럼 보여 놓치기 쉬운 이상을 먼저 확인</li><li>담당자가 바뀌어도 판단 근거가 이어짐</li><li>운전·설정은 지금처럼 현장이 결정</li></ul></div>
+      <div class="card reveal"><span class="role">SITE</span><h3>현장 기술팀</h3><q>경험이 건물의 기록이 된다</q><ul><li>정상처럼 보여 놓치기 쉬운 이상을 <span style="white-space:nowrap">먼저 확인</span></li><li>담당자가 바뀌어도 판단 근거가 이어짐</li><li>운전·설정은 지금처럼 현장이 결정</li></ul></div>
       <div class="card reveal"><span class="role">ASSET</span><h3>자산운용사</h3><q>설비 이력이 자산 설명 자료가 된다</q><ul><li>보유 기간의 판정 이력이 남음</li><li>매수자·대주단 실사 때 설명 자료로 활용</li><li>건물별 상태를 한 화면에서 비교</li></ul></div>
     </div>
     <div class="life reveal">
@@ -857,7 +859,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
         <div class="price">
           <div class="lab">수억 원대 시스템 구축이 아닙니다</div>
           <div class="amt">월 89만~119만원<small>수준</small></div>
-          <p>매달 내는 설비 기장료입니다. 설비 교체·공사 없이 시작합니다. 건물 전체 관제점 · 부가세 별도</p>
+          <p>매달 내는 설비 기장료입니다. 설비 교체·공사 없이 시작합니다. <span style="white-space:nowrap">건물 전체 관제점 · 부가세 별도</span></p>
         </div>
       </div>
       <form class="form reveal" id="apply" novalidate>
@@ -914,7 +916,7 @@ footer{background:#0B1012;color:var(--t-ink-3);padding:64px 0 40px;font-size:14p
       <div>
         <a class="lockup" href="#top"><img src="static/v2/TEKTON_clean_white.svg" alt="TEKTON 텍톤"><span class="sep"></span><img src="static/v2/T-ARCH_clean_white.svg" alt="T-ARCH 티아크"></a>
         <div class="ft-links"><a href="#solution">방식</a><a href="#app">현장 앱</a><a href="#case">사례</a><a href="#start">7일 진단 신청</a><a href="#about">회사 소개</a><a href="#faq">자주 묻는 질문</a><a href="static/v2/TARCH_brochure_KO.pdf" download="티아크_소개서.pdf">소개서 PDF</a><a href="https://app.tekton.co.kr/download" target="_blank" rel="noopener">앱 받기</a><a href="https://app.tekton.co.kr" target="_blank" rel="noopener">고객 로그인</a><a href="/privacy.html"><b style="color:#fff">개인정보처리방침</b></a></div>
-        <address>텍톤(TEKTON) · 대표 최경록 · <span style="white-space:nowrap">사업자등록번호 720-03-03738</span><br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="tel:0236629430">02-3662-9430</a> · <a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
+        <address>텍톤(TEKTON) · 대표 최경록<br>사업자등록번호 720-03-03738<br>경기도 하남시 신우실로 100, 현대테라타워 감일 224호<br><a href="tel:0236629430">02-3662-9430</a> · <a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a></address>
       </div>
       <div style="max-width:360px"><b style="color:#fff;font-size:16px">세무는 세무사에게, 건물 설비는 티아크에게.</b><p style="margin-top:8px">티아크(T-ARCH)는 텍톤이 만드는 건물 설비 기술기장 서비스입니다.</p></div>
     </div>
